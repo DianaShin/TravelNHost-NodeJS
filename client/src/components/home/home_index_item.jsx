@@ -1,10 +1,7 @@
 import React from 'react';
+import './home_index_item.scss';
 
 class HomeIndexItem extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { name, image_url } = this.props;
     return (

@@ -1,0 +1,35 @@
+
+.home-index {
+  width: 100vw;
+  height: 100%;
+
+}
+
+.destinations-index {
+  width: 1200px;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+  padding: 0 0 78px 0;
+  font-family: 'Raleway', sans-serif;
+  /*height: 800px;*/
+  display: block;
+  /*position: relative;
+  left: 25px;*/
+  align-items: center;
+}
+
+
+
+ul.destinations-row {
+  margin-bottom: -78px;
+  padding: 0px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  width: 1200px;
+  position: relative;
+}

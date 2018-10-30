@@ -2,11 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import WrappedApp from './components/WrappedApp';
-//import configureStore from './store/index';
 import * as serviceWorker from './serviceWorker';
-// import { getDestinations } from './actions/destinations/index.js';
 
-//const store = configureStore();
 ReactDOM.render(
     <WrappedApp />,
   document.getElementById('root')
