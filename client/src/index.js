@@ -1,10 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import WrappedApp from './components/WrappedApp';
+//import configureStore from './store/index';
 import * as serviceWorker from './serviceWorker';
+// import { getDestinations } from './actions/destinations/index.js';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+//const store = configureStore();
+ReactDOM.render(
+    <WrappedApp />,
+  document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -26,4 +26,4 @@ mongoose.connection.on('error', (err) => {
 
 app.use('/', routes);
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+app.listen(port, () => console.log(`Yipee! Listening on port ${port}`));

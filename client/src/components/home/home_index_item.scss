@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+img.destination {
+  height: 200px;
+  margin-left: 6px;
+
+}
+
+img.destination:hover {
+  filter: brightness(50%);
+  cursor: pointer;
+}
+
+
+.parent:hover .destination-name {
+  opacity: 1;
+}
+
+p.destination-name {
+  position: relative;
+  top: 45px;
+  left: 5px;
+  text-align: left;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 50;
+  opacity: 0;
+}
