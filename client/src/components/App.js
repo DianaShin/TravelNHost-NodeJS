@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HomeContainer from './home/home_index_container';
+import HomeContainer from './home/home';
 import './App.scss';
 
 class App extends Component {
