@@ -27,7 +27,12 @@ const userSchema = new mongoose.Schema({
   lastName: {
     type: String,
     true: true,
-    required: 'Please neter your last name!'
+    required: 'Please enter your last name!'
+  },
+  destination: {
+    type: String,
+    true: true,
+    required: 'Please enter where you live!'
   },
   lat: {
     type: Number,

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import HomeContainer from './home/home';
+// import HeaderContainer from './header/header_container';
 import './App.scss';
+import Favicon from 'react-favicon';
 
 class App extends Component {
   componentDidMount() {
@@ -10,12 +12,9 @@ class App extends Component {
     return (
 
       <div className="App">
-        <header className="App-header">
-          <p>
-            TravelNHost on Node is coming soon!
-          </p>
+        <Favicon title="TravelNHost" url="https://s3.amazonaws.com/vector-icons/backpackicon-01.png"/>
+
           <HomeContainer />
-        </header>
       </div>
     );
   }
