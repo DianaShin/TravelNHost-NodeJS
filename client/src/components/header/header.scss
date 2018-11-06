@@ -1,0 +1,135 @@
+nav {
+  font-family: 'Raleway', sans-serif;
+  position: fixed;
+  width: 98%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #20b2aa;
+  color: white;
+  padding-top: 2px;
+  padding-left: 15px;
+  padding-right: 20px;
+  margin-top: -8px;
+  border-bottom: 25px solid white;
+  height: 95px;
+  font-size: 28px;
+  z-index: 500;
+}
+
+.whitespace {
+  display: block;
+  height: 120px;
+  background-color:  white;
+}
+
+div.header-left {
+  /*float: right;*/
+  float: left;
+}
+
+.header-left .logo {
+  display: inline-block;
+  width: 75px;
+  margin-left: 5px;
+  margin-top: 7px;
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.logo:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.header-left .brand-name  {
+  display: inline-block;
+  margin-left: 7px;
+  position: relative;
+  bottom: 25px;
+  font-size: 32px;
+  overflow: visible;
+}
+
+.search-container {
+
+}
+
+::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.session-form input::-webkit-input-placeholder {
+    color: #696969;
+    opacity: 1;
+}
+
+ul .header-nav-buttons-list {
+  float: right;
+}
+
+.header-nav-demo-button {
+  display: inline-block;
+  border: white 2px solid;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding-left: 10px;
+  list-style: none;
+  background: white;
+  color: #20b2aa;
+  cursor: pointer;
+  outline: none;
+}
+
+.header-nav-demo-button:hover {
+  filter: opacity(0.75);
+}
+
+.header-nav-buttons-list-item {
+  display: inline-block;
+  border: white 2px solid;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 3px;
+  margin-right: 10px;
+  list-style: none;
+  background: #20b2aa;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header-nav-buttons-list-link {
+  border: none;
+  text-decoration: none;
+  padding-right: 2px;
+  color: white;
+}
+
+button.header-nav-buttons-list-item {
+  border: none;
+  outline: none;
+}
+.header-nav-buttons-list-item:hover {
+  filter: opacity(0.75);
+  outline: none;
+}
+
+.header-nav-buttons-list-item.dashboard {
+  padding-top: 2px;
+  padding-bottom: 1px;
+}

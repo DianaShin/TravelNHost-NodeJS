@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import './session_form.scss';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -19,10 +20,12 @@ class SessionForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(
-    () => this.props.closeModal()
-   )
-   .then(() => this.props.history.push("/"));
+    console.log(user);
+    console.log(this.props);
+    this.props.processForm(user)
+
+    setTimeout(()=> this.props.history.push("/"), 3000);
+    //  .then(() => this.props.history.push("/"));
  }
 
 
@@ -83,7 +86,7 @@ class SessionForm extends React.Component {
            src='http://res.cloudinary.com/ayoung0131/image/upload/v1515036419/x-icon_zdcj8l.svg'
            width="20"
            height="20"
-           onClick={this.props.closeModal}/>
+           onClick={this.props.closeModal} />
        </div>
          <h2 className="modal-subtitle">PLEASE {title}</h2>
          <div className="modal-line-break"></div>

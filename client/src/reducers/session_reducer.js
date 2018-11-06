@@ -1,17 +1,17 @@
 import { RECEIVE_CURRENT_USER } from '../actions/session/index';
 
-const _nullUser = Object.freeze({
-  id: null
-});
+const prevState = {
+  currentUser: null
+};
 
-const sessionReducer = (state = _nullUser, action) => {
+const sessionReducer = (state = prevState, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
-      return {
+      return {currentUser: {
         id: action.payload.id,
         username: action.payload.username,
-      };
+      }};
     default:
       return state;
   }
