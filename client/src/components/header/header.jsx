@@ -26,8 +26,8 @@ class Header extends React.Component {
               </Link>
               <h1 className="brand-name">TRAVEL N HOST</h1>
             </div>
-            {this.props.currentUser && this.props.currentUser.username}
-            <ul className="header-nav-buttons-list">
+            {!this.props.currentUser &&
+            (<ul className="header-nav-buttons-list">
               <li className='header-nav-demo-button'>
                 <button className='header-nav-demo-button' onClick={this.demo}>DEMO</button>
               </li>
@@ -81,7 +81,19 @@ class Header extends React.Component {
                     </Route>
                   </Switch>
               </li>
-            </ul>
+            </ul>)}
+            {this.props.currentUser &&
+              <ul className="header-nav-buttons-list">
+                <li className='header-nav-buttons-list-item'>
+                  <Link to="/dashboard">
+                    <button className='header-nav-buttons-list-item dashboard'>{this.props.currentUser.username}'S DASHBOARD</button>
+                  </Link>
+                </li>
+                  <li className='header-nav-buttons-list-item'>
+                    <button className='header-nav-buttons-list-item dashboard' onClick={()=>this.props.logoutUser().then(()=>{return this.props.history.push('/')})}>LOGOUT</button>
+                  </li>
+              </ul>
+            }
           </nav>
           <div className="whitespace"> </div>
         </div>
