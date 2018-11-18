@@ -4,6 +4,7 @@ import { getDestinations } from '../../actions/destinations/index';
 
 const mapStateToProps = state => ({
   destinations: state.destinations.destinations,
+  currentUser: state.session.currentUser,
   loading: state.destinations.loading,
 });
 

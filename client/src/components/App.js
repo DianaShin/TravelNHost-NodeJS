@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import HeaderContainer from './header/header_container';
 import HomeContainer from './home/home';
+import DestinationShow from './destinations/destination_show_container';
 import './App.scss';
 import Favicon from 'react-favicon';
 
@@ -14,7 +15,8 @@ class App extends Component {
           <Route path="" component={HeaderContainer}/>
           <Route exact path="/signup" component={HomeContainer}/>
           <Route exact path="/login" component={HomeContainer}/>
-          <Route exact path="/" component={HomeContainer}/>
+          <Route path='/destinations/:destinationName' component={DestinationShow}/>
+          <Route exact path="/" component={HomeContainer}/> 
       </div>
     );
   }

@@ -9,9 +9,14 @@ class HomeIndex extends React.Component {
 
   render() {
     const { destinations, loading } = this.props;
-    console.log(destinations);
     let dests = destinations.map(destination => {
-      return <HomeIndexItem name={destination.name} image_url={destination.image_url}/>
+      return <HomeIndexItem
+                name={destination.name}
+                currentUser={this.props.currentUser}
+                key={destination.id}
+                lat={destination.lat}
+                destination={destination}
+                image_url={destination.image_url}/>
     })
     return (
       !loading && (

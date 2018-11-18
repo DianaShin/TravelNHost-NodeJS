@@ -4,6 +4,7 @@ import jwt_decode from 'jwt-decode';
 
 export const GET_ERRORS = 'GET_ERRORS';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
+export const REMOVE_CURRENT_USER = 'REMOVE_CURRENT_USER';
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 
 export const registerUser = (userData, history) => dispatch => {
@@ -49,8 +50,14 @@ export const setCurrentUser = decoded => {
   }
 }
 
+export const removeCurrentUser = () => {
+  return {
+    type: REMOVE_CURRENT_USER,
+  }
+}
+
 export const logoutUser = () => dispatch => {
   localStorage.removeItem('jwtToken');
   setAuthToken(false);
-  dispatch(setCurrentUser({}));
+  dispatch(removeCurrentUser());
 }

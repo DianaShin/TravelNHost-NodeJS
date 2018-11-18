@@ -39,7 +39,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
 
     const demoUser = {
-      username: 'mustafa',
+      username: 'mehmet',
       password: 'Istanbul'
     };
     this.setState(demoUser, () => {
@@ -48,13 +48,8 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    let title;
-    let linkTo;
-    let switchModalMessage;
-    let switchModalButton;
-    let switchClick;
+    let title, switchModalMessage, switchModalButton, switchClick, demoButton;
     let guestLogin = "DEMO";
-    let demoButton;
     switch (this.props.formType) {
       case('login'):
         title = 'LOGIN';
