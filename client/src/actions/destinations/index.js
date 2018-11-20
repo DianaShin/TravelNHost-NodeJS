@@ -38,10 +38,10 @@ export const getDestinations = () => dispatch => {
     })
 }
 
-export const getDestination = () => dispatch => {
+export const getDestination = (destinationName) => dispatch => {
   dispatch(setDestinationLoading());
   axios
-    .get('/api/destinations/:destinationId')
+    .get(`/api/destinations/${destinationName}`)
     .then(res => {
       console.log(res);
       dispatch({

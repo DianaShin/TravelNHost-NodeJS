@@ -1,4 +1,4 @@
-import { GET_DESTINATIONS, DESTINATIONS_LOADING } from "../actions/destinations/index";
+import { GET_DESTINATIONS, GET_DESTINATION, DESTINATIONS_LOADING } from "../actions/destinations/index";
 
 const initialState = {
   destinations: [],
@@ -13,12 +13,18 @@ const destinationsReducer = (state = initialState, action) => {
         loading: true
       }
     case GET_DESTINATIONS: {
-      console.log(action);
       return {
         ...state,
         destinations: action.payload || [],
         loading: false
       };
+    }
+    case GET_DESTINATION: {
+      return {
+        ...state,
+        destinations: [action.payload] || [],
+        loading: false
+      }
     }
     default:
       return state;
