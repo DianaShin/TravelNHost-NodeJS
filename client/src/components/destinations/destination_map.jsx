@@ -20,16 +20,16 @@ class DestinationMap extends React.Component {
       }
       // wrap the mapDOMNode in a Google Map
       this.map = new google.maps.Map(this.mapNode, mapOptions);
-  //    this.MarkerManager = new MarkerManager(this.map);
+      this.MarkerManager = new MarkerManager(this.map);
 
       this._registerListeners();
 
-  //    this.MarkerManager.updateMarkers(newProps.hosts);
+      this.MarkerManager.updateMarkers(newProps.hosts);
     }
   }
 
   componentDidUpdate() {
-  //  this.MarkerManager.updateMarkers(this.props.hosts);
+    this.MarkerManager.updateMarkers(this.props.hosts);
 }
 
   _registerListeners() {

@@ -1,6 +1,8 @@
 import React from 'react';
 import './destination_show.scss';
 import DestinationMap from './destination_map';
+import HostsIndex from '../hosts/hosts_index_container';
+
 /* eslint-disable no-undef */
 class DestinationShow extends React.Component {
   componentDidMount() {
@@ -10,8 +12,7 @@ class DestinationShow extends React.Component {
   }
 
   render() {
-    console.log(this.props);
-    const { destination } = this.props;
+    const { destination, hosts } = this.props;
 
     return (
       <main>
@@ -22,9 +23,10 @@ class DestinationShow extends React.Component {
           destination={destination}
           lat={destination.lat}
           long={destination.long}
+          hosts={hosts}
         />
         <div className="hosts-index">
-          <p>Hosts Index goes here!</p>
+          <HostsIndex />
         </div>
       </main>
     );

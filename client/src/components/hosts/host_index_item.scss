@@ -1,0 +1,46 @@
+.hosts-info-box {
+  list-style: none;
+  margin-bottom: 12px;
+  padding: 3px;
+  border-bottom: 2px dashed #696969;
+  position: relative;
+  right: 20px;
+}
+/*
+li.hosts-info-box:hover {
+  background-color: rgba(32,178,170, 0.25);
+}*/
+img.host-profile-pic {
+  width: 25%;
+  height: 25%;
+  padding-bottom: 12px;
+  border-radius: 3px;
+}
+
+p.host-details {
+  color: #696969;
+  text-align: left;
+}
+
+
+.profile-icon {
+  width: 18px;
+  position: relative;
+  left: 10px;
+}
+
+.host-details-align {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+.age-gender {
+  position: relative;
+  bottom: 40px;
+}
+
+.accepting-guests {
+  color: #ef4a3e;
+  position: relative;
+  bottom: 40px;
+}

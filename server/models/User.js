@@ -2,11 +2,6 @@
 
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-const md5 = require('md5');
-const bcrypt = require('bcryptjs');
-const validator = require('validator');
-const mongodbErrorHandler = require('mongoose-mongodb-errors');
-const passportLocalMongoose = require('passport-local-mongoose');
 
 const userSchema = new mongoose.Schema({
   username: {
@@ -49,6 +44,10 @@ const userSchema = new mongoose.Schema({
     true: true,
   },
   gender: {
+    type: String,
+    true: true,
+  },
+  imgUrl: {
     type: String,
     true: true,
   },

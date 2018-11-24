@@ -1,4 +1,5 @@
 import { GET_HOSTS, HOSTS_LOADING } from "../actions/hosts/index";
+import normalizeItems from "../utils/normalize_items";
 
 const initialState = {
   hosts: [],
@@ -15,7 +16,7 @@ const hostsReducer = (state = initialState, action) => {
     case GET_HOSTS: {
       return {
         ...state,
-        hosts: action.payload || [],
+        hosts: normalizeItems(action.payload, '_id') || {},
         loading: false
       }
     }

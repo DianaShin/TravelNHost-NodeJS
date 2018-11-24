@@ -23,7 +23,6 @@ export const getDestinations = () => dispatch => {
   axios
     .get('/api/destinations')
     .then(res => {
-      console.log(res);
       dispatch({
         type: GET_DESTINATIONS,
         payload: res.data,

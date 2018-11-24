@@ -34,6 +34,7 @@ exports.register = async (req, res) => {
             age: req.body.age,
             gender: req.body.gender,
             about: req.body.about,
+            imgUrl: req.body.imgUrl,
         })
 
         user.save();
